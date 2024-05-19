@@ -17,6 +17,7 @@ app = Client(
     sleep_threshold=30
 )
 
+
 logging.basicConfig(level=logging.INFO)
 
 @app.on_message(filters.command("start") & filters.private)
@@ -43,7 +44,7 @@ async def get_temp_mail(_, m: Message) -> Message:
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Check Inbox manually", url="https://email.catdns.in/{}".format(random_mail.split("@catdns.in")[0]))
+                    InlineKeyboardButton("Check Inbox manually", url="https://email.catdns.in/mail/{}".format(random_mail.split("@catdns.org")[0]))
                 ]
             ]
         )
