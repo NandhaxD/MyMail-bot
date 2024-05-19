@@ -9,7 +9,7 @@ from config import API_HASH, API_ID, BOT_TOKEN
 from util import get_random_mail, emails_task
 
 app = Client(
-    "Catdns",
+    "NandhaEmailBot",
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
@@ -22,11 +22,11 @@ logging.basicConfig(level=logging.INFO)
 @app.on_message(filters.command("start") & filters.private)
 async def welcome_message(_, m: Message) -> Message:
     message = (
-        "Welcome to **[Catdns emails bot](mail.catdns.in)** 👋.\n"
+        "Welcome to **@NandhaEmailBot** 👋.\n"
         "This bot made to make temp mail on **catdns.in** domain.\n"
         "To get random temp mail send : /temp\n\n"
-        "Powered by: **DevZaid.t.me**"
-    )
+        "Powered by: **Nandha.t.me**"  
+    ) #sorry bro
     return await m.reply(
         text=message,
         quote=True,
