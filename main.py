@@ -25,7 +25,7 @@ async def welcome_message(_, m: Message) -> Message:
         "Welcome to **@NandhaEmailBot** 👋.\n"
         "This bot made to make temp mail on **catdns.in** domain.\n"
         "To get random temp mail send : /temp\n\n"
-        "Powered by: **Nandha.t.me**"  
+        "Powered by: **NandhaBots.t.me**"  
     ) #sorry bro
     return await m.reply(
         text=message,
